@@ -240,7 +240,7 @@ function appendQuery(url, query) {
 
 // serialize payload and append it to the URL for GET requests
 function serializeData(options) {
-  if (type(options.data) === 'object') options.data = param(options.data)
+  if ((type(options.data) === 'object') && !!FormData && (options.data.constructor !== FormData)) options.data = param(options.data)
   if (options.data && (!options.type || options.type.toUpperCase() == 'GET'))
     options.url = appendQuery(options.url, options.data)
 }
