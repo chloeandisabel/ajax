@@ -4,7 +4,6 @@
   "version": "0.0.2",
   "keywords": [],
   "dependencies": {
-    "type-of": "*"
   },
   "main": "index.js",
   "license": "MIT",
